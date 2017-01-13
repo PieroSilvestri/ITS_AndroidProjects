@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:focusable="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="10dp"
+    android:clickable="true"
+    android:background="@drawable/rotondobordo"
+    android:id="@+id/postItemsRL"
+    android:orientation="vertical">
+
+    <TextView android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle"
+        android:id="@+id/view"
+        android:text="T"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:textColor="@color/titolo"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/view"
+        android:layout_toEndOf="@+id/view"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:id="@+id/testo"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:maxLength="50"
+        android:ellipsize="end"
+        android:scrollHorizontally="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="7dp"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/view"
+        android:layout_alignLeft="@+id/title" />
+
+    <TextView
+        android:id="@+id/ID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/testo"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_marginTop="7dp"
+        android:textSize="15dp"
+        android:text="" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/linearLayout2">
+        <!--android:layout_alignEnd="@+id/ID"-->
+        <!--android:layout_toEndOf="@+id/view">-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/importantButton"
+            android:src="@drawable/ic_star_border"
+            android:layout_weight="1"
+            android:tint="#b5a9a9"
+            android:backgroundTint="#ffffff" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/iconaFoto"
+            android:src="@drawable/ic_panorama"
+            android:layout_weight="1"
+            android:tint="#b5a9a9" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/audioIcon"
+            android:layout_weight="1"
+            android:src="@drawable/ic_headset"
+            android:tint="#b5a9a9" />
+
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/year"-->
+    <!--android:textColor="@color/data"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_height="wrap_content" />-->
+
+</RelativeLayout>

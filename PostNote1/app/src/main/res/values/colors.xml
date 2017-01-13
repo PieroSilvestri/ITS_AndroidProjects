@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="windowBackground">#fff</color>
+    <color name="colorPrimary">#1b7da4</color>
+    <color name="colorPrimaryDark">#4e342e</color>
+    <color name="colorAccent">#1b7da4</color>
+    <color name="lightPrimary">#1b7da4</color>
+    <color name="textIcons">#212121</color>
+    <color name="textPrimary">#4e342e</color>
+    <color name="textSecondary">#fff</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="data">#999999</color>
+    <color name="titolo">#222222</color>
+    <color name="buttonsColor">#1b7da4</color>
+    <color name="navigationBarColor">#4e342e</color>
+    <color name="postItem">#fff</color>
+</resources>

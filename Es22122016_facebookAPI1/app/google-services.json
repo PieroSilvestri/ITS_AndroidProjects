@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "601345963235",
+    "firebase_url": "https://prova1-6359e.firebaseio.com",
+    "project_id": "prova1-6359e",
+    "storage_bucket": "prova1-6359e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601345963235:android:e537b52a7f5b28de",
+        "android_client_info": {
+          "package_name": "com.example.pierosilvestri.es22122016_facebookapi1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601345963235-qo88m29fnjc6qhq36j89r1c64vdsutkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJXiNkIEMbYgLth2I_b2WZ6e6EflSGMYQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

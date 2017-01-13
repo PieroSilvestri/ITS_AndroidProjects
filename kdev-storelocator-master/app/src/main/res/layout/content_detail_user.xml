@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_detail_user"
+    tools:context=".DetailUserActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="nome+nonome cognome+cocognome"
+        android:id="@+id/txtStoreName"
+        android:drawableLeft="@drawable/ic_perm_identity"
+        android:drawablePadding="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:textSize="25dp"
+        android:textColor="@color/oro"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c2c2c2"
+        android:id="@+id/line0"
+        android:layout_below="@+id/txtStoreName" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/line0"
+        android:layout_above="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ID"
+                android:id="@+id/address"
+                android:textColor="@color/oro"
+                android:textSize="20dp"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="--"
+                android:id="@+id/txtStoreAddress"
+                android:layout_below="@+id/address"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c2c2"
+                android:layout_below="@+id/txtStoreAddress"
+                android:id="@+id/line1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Nome"
+                android:id="@+id/phone"
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/oro"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="-----"
+                android:id="@+id/txtStorePhone"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/phone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c2c2"
+                android:id="@+id/line2"
+                android:layout_below="@+id/txtStorePhone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Cognome"
+                android:id="@+id/salesPerson"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/oro"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="------"
+                android:id="@+id/txtSalesPerson"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/salesPerson"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c2c2"
+                android:id="@+id/line3"
+                android:layout_below="@+id/txtSalesPerson" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="E-mail"
+                android:id="@+id/description"
+                android:layout_below="@+id/line3"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/oro"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="------"
+                android:id="@+id/txtStoreDescriptions"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/description"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c2c2"
+                android:id="@+id/lin4"
+                android:layout_below="@+id/txtStoreDescriptions" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Azienda"
+                android:id="@+id/company1"
+                android:layout_below="@+id/lin4"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/oro"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="-----"
+                android:id="@+id/txtCompany"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/company1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:id="@+id/btnModifica"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:textColor="#fff"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:id="@+id/btnLogout"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:textColor="#fff"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>

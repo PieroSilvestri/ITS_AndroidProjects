@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "it.tsamstudio.noteme"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        generatedDensities = []
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.couchbase.lite:couchbase-lite-android:1.2.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.7.4'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.github.brnunes:swipeablerecyclerview:1.0.2'
+    compile 'com.nhaarman.supertooltips:library:3.0.0'
+    compile 'com.wdullaer:materialdatetimepicker:2.3.0'
+    compile 'com.github.michaldrabik:tapbarmenu:1.0.5'
+    compile project(':Material-Color-Picker-master')
+    // S3
+    compile 'com.amazonaws:aws-android-sdk-core:2.+'
+    compile 'com.amazonaws:aws-android-sdk-cognito:2.+'
+    compile 'com.amazonaws:aws-android-sdk-s3:2.+'
+    // encryption
+    compile 'com.scottyab:aescrypt:0.0.1'
+}
