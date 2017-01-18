@@ -14,4 +14,6 @@ public class TownHelper implements BaseColumns {
             + " ( " + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + NAME  + " TEXT NOT NULL "
             + ");";
+
+    public static final String DESTROY = "DROP TABLE " + TABLE_NAME;
 }

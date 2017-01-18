@@ -23,6 +23,7 @@ public class DataHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TownHelper.CREATE_QUERY);
+        db.execSQL(TownHelper.DESTROY);
     }
 
     @Override

@@ -73,7 +73,7 @@ public class TownAdapter extends BaseAdapter {
 
         // 3) Prendo il dato che mi serve
         Town vTown = getItem(position);
-        viewHolder.mName.setText("" + viewHolder.mName);
+        viewHolder.mName.setText("" + vTown.mName);
 
         return vCell;
     }
