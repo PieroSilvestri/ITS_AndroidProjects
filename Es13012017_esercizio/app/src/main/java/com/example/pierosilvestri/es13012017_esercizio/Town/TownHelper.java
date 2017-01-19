@@ -15,5 +15,6 @@ public class TownHelper implements BaseColumns {
             + NAME  + " TEXT NOT NULL "
             + ");";
 
-    public static final String DESTROY = "DROP TABLE " + TABLE_NAME;
+    public static final String DESTROY = "DROP TABLE " + TABLE_NAME + ";";
+
 }
