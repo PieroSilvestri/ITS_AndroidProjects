@@ -17,4 +17,10 @@
         </activity>
     </application>
 
+    <provider
+        android:authorities="com.example.pierosilvestri"
+        android:name="com.example.pierosilvestri.es13012017_esercizio.Town.TownContentProvider"
+        android:exported="false" >
+    </provider>
+
 </manifest>

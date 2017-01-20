@@ -12,7 +12,7 @@ import com.example.pierosilvestri.es13012017_esercizio.Town.TownHelper;
 
 public class DataHelper extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "towns2.db";
+    private static final String DB_NAME = "towns3.db";
     private static final int VERSION = 1;
 
     public DataHelper(Context aContext){
@@ -27,6 +27,6 @@ public class DataHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL(TownHelper.DESTROY);
     }
 }

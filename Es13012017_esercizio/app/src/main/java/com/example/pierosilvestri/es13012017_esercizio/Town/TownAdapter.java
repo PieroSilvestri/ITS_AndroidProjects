@@ -1,6 +1,8 @@
 package com.example.pierosilvestri.es13012017_esercizio.Town;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.support.v4.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,64 +19,30 @@ import java.util.ArrayList;
  * Created by pierosilvestri on 13/01/17.
  */
 
-public class TownAdapter extends BaseAdapter {
+public class TownAdapter extends CursorAdapter {
 
-    ArrayList<Town> mData;
-    Context mContext;
+    public TownAdapter(Context context, Cursor c) {
+        super(context, c, false);
+    }
 
-    public TownAdapter(Context aContext, ArrayList<Town> aData){
-        this.mContext = aContext;
-        this.mData = aData;
+    private class ViewHolder {
+        TextView txtNome, txtCognome;
     }
 
     @Override
-    public int getCount() {
-        return mData.size();
+    public View newView(Context context, Cursor cursor, ViewGroup parent) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.single_town, null);
+
+        ViewHolder holder = new ViewHolder();
+        holder.txtNome = (TextView) view.findViewById(R.id.textView_singleTown);
+        view.setTag(holder);
+
+        return view;
     }
 
     @Override
-    public Town getItem(int position) {
-        return mData.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return mData.get(position).mId;
-    }
-
-    class ViewHolder{
-        TextView mName;
-    }
-
-    @Override
-    public View getView(int position, View view, ViewGroup parent) {
-
-        View vCell;
-
-        if(view == null){
-            // Se non esiste creo la view
-            LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-
-            // 1) Creiamo la View "cella"
-            vCell = layoutInflater.inflate(R.layout.single_town, null);
-
-            // 2) Tiro fuori i riferimenti alla view
-            TextView vName = (TextView) vCell.findViewById(R.id.textView_singleTown);
-
-            ViewHolder viewHolder = new ViewHolder();
-            viewHolder.mName = vName;
-
-            vCell.setTag(viewHolder);
-        }else{
-            vCell = view;
-        }
-
-        ViewHolder viewHolder = (ViewHolder) vCell.getTag();
-
-        // 3) Prendo il dato che mi serve
-        Town vTown = getItem(position);
-        viewHolder.mName.setText("" + vTown.mName);
-
-        return vCell;
+    public void bindView(View view, Context context, Cursor cursor) {
+        ViewHolder holder = (ViewHolder) view.getTag();
+        holder.txtNome.setText("" + cursor.getString(cursor.getColumnIndex(TownHelper.NAME)));
     }
 }

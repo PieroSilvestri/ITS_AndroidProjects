@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setTitle("Anagrafe");
         setSupportActionBar(myToolbar);
 
-
         mCursorAdapter = new AnagraficheAdapter(this, null);
 
         mListView = (ListView) findViewById(R.id.listView);
@@ -53,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent vIntent = new Intent(MainActivity.this, DetailActivity.class);
-                vIntent.putExtra("IDANAGRAFICHE", id);
+                Intent vIntent = new Intent(MainActivity.this, DetailActivity.class)
+                vIntent.putExtra("IDANAGRAFICHE", id)
                 startActivity(vIntent);
             }
         });
